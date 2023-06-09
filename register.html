@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css" type="text/css">
+   </head>
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+  <div class="wrapper">
+    
+    
+    <form method="POST" action="register.php">
+      <h3>Registration</h3>
+      <div class="input-box">
+        <input type="text" name="username" placeholder="Enter your name" required>
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Create password" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="confirm_password" placeholder="Confirm password" required>
+      </div>
+
+      <div>
+        <input type="checkbox" class="cb" id="checkbox" style="display: inline-block;">
+        <label for="checkbox" style="display: inline-block;"><h4>accept all terms & condition</h4></label>
+
+      </div> 
+
+      
+
+      <div class="regist">
+        <input type="Submit" value="Register Now">
+      </div>
+      <div class="text">
+        <h5>Already have an account? <a href="login.html">Login now</a></h5>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
