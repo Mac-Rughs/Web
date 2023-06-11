@@ -35,7 +35,7 @@ Engineering</a>
     </div>&nbsp; <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 3 </a> </h2>
         <div class="dropdown-content">
-                    <a href="#">Linear Algebra and Transform
+                    <a href="latt.php">Linear Algebra and Transform
 Techniques</a>
                     <a href="#">Logic Design</a>
                     <a href="#">Discrete Computational
@@ -112,5 +112,8 @@ Processing</a>
     </div>
     
 </div>  
+<div class="back-button">
+<a class="back-button" href="index.php">Back</a>
+</div>
 </body>
 </html>
