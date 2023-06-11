@@ -12,7 +12,7 @@ if (!isset($_SESSION['admin_username'])) {
 if (isset($_GET['logout'])) {
     // Destroy the session and redirect to the admin login page
     session_destroy();
-    header("Location: admin_login.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -44,6 +44,17 @@ if (isset($_GET['logout'])) {
             color: #333333;
         }
 
+        .upload-link {
+            display: block;
+            margin-top: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .upload-link:hover {
+            color: #45a049;
+        }
+
         .logout-link {
             display: block;
             margin-top: 20px;
@@ -59,9 +70,8 @@ if (isset($_GET['logout'])) {
 <body>
     <div class="container">
         <h1>Welcome, <?php echo $_SESSION['admin_username']; ?></h1>
-        <?php include 'upload_notes.php'; ?>
 
-        <!-- Add your dashboard content here -->
+        <a href="upload_notes.php" class="upload-link">Upload Notes</a>
 
         <a href="?logout=1" class="logout-link">Logout</a>
     </div>

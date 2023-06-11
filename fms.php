@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>PHP Web Page</title>
-    <link rel="stylesheet" href="pms.css" type="text/css">
+    <link rel="stylesheet" href="fms.css" type="text/css">
     
 </head>
 <body>
 <div class="Full_mark">
 
     
-    <h1><a class="Full_mark">PASS MARK ORIENTED </a></h1>
+    <h1><a class="Full_mark">FULL MARK ORIENTED </a></h1>
     <div class="dropdown">
         <h2><a class="Sem"> SEMESTER 1 </a> </h2>
         <div class="dropdown-content">
@@ -20,8 +20,8 @@
                     <a href="#">Basic Mechanical
 Engineering</a>
                     <a href="#">Soft Skills Development </a>
-        </div> 
-    </div> 
+        </div> &nbsp;
+    </div>&nbsp; 
     <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 2 </a> </h2>
         <div class="dropdown-content">
@@ -31,8 +31,8 @@ Engineering</a>
                     <a href="#">Basic Electrical Engineering</a>
                     <a href="#">Basic Electronics Engineering</a>
                     <a href="#">Environmental Studies</a>
-        </div> 
-    </div> <div class="dropdown">
+        </div> &nbsp;
+    </div>&nbsp; <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 3 </a> </h2>
         <div class="dropdown-content">
                     <a href="#">Linear Algebra and Transform
@@ -45,8 +45,8 @@ Structures </a>
 Languages</a>
                     <a href="#">Data and Computer
 Communication </a>
-        </div>  
-    </div> <div class="dropdown">
+        </div>  &nbsp;
+    </div>&nbsp; <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 4 </a> </h2>
         <div class="dropdown-content">
                     <a href="#">Complex Variables and Partial
@@ -59,8 +59,8 @@ Computations</a>
                     <a href="#">Data Structures and Algorithms</a>
                     <a href="#">Database Management Systems</a>
                     <a href="#">Universal Human Values</a>
-        </div> 
-    </div> <div class="dropdown">
+        </div>&nbsp; 
+    </div>&nbsp; <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 5 </a> </h2>
         <div class="dropdown-content">
                     <a href="#">Numerical and Statistical
@@ -72,8 +72,8 @@ Engineering</a>
                     <a href="#">Advanced Microprocessors and
 Microcontrollers </a>
                     <a href="#">Professional Elective I </a>
-        </div>  
-    </div> <div class="dropdown">
+        </div>  &nbsp;
+    </div>&nbsp; <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 6 </a> </h2>
         <div class="dropdown-content">
                     <a href="#">Computer Networks </a>
@@ -83,9 +83,9 @@ Algorithms</a>
                     <a href="#">Data Mining</a>
                     <a href="#">Operating System</a>
                     <a href="#">Professional Elective II</a>
-        </div>
+        </div>&nbsp;
     </div>
-    
+    &nbsp;
     <div class="dropdown">
         <h2><a class="Sem">   SEMESTER  7</a> </h2>
         <div class="dropdown-content">
@@ -96,9 +96,9 @@ Processing</a>
                     <a href="#">Professional Elective III</a>
                     <a href="#">Operating System</a>
                     <a href="#">Open Elective I</a>
-        </div>
+        </div>&nbsp;
     </div>
-    
+    &nbsp;
     <div class="dropdown">
         <h2><a class="Sem">   SEMESTER 8 </a> </h2>
         <div class="dropdown-content">
@@ -108,7 +108,7 @@ Processing</a>
                     <a href="#">Open Elective II</a>
                     <a href="#">Operating System</a>
                     <a href="#">Seminar</a>
-        </div>
+        </div>&nbsp;
     </div>
     
 </div>  

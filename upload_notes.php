@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Get file details
     $file_name = $_FILES['pdf_file']['name'];
-    $file_size = $_FILES['pdf_file']['size'];
     $file_tmp = $_FILES['pdf_file']['tmp_name'];
     $file_type = $_FILES['pdf_file']['type'];
+    $file_size = $_FILES['pdf_file']['size'];
 
     // Check file extension (allow only PDF files)
     $allowed_extensions = array('pdf');
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Move the uploaded file to the desired directory
     if (move_uploaded_file($file_tmp, $file_path)) {
         // Insert the file details into the database
-        $sql = "INSERT INTO notes (file_name, file_path) VALUES ('$file_name', '$file_path')";
+        $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size) VALUES ('$file_name', '$file_path', '$file_type', '$file_size')";
 
         if (mysqli_query($conn, $sql)) {
             echo "File uploaded successfully.";
@@ -72,6 +72,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <title>Upload Notes</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: bla;
+            background-color: white;
+            padding: 5px;
+            font-weight: bold;
+            border-radius: 20%;
+           
+        }
+    </style>
 </head>
 <body>
     <h1>Upload Notes</h1>
@@ -82,5 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <button type="submit">Upload</button>
     </form>
+
+    <a class="back-button" href="admin_dashboard.php">Back</a>
 </body>
 </html>
