@@ -46,7 +46,7 @@ Techniques</h1>
         <h2>Notes</h2>
         <div class="scroll-box">
             <!-- Add your notes content here -->
-            <p><a href="C:\xampp\htdocs\PrepIT\uploads\car.pdf" target="_blank"> Car</a></p>
+            <p><a href="http://localhost:8012/PrepIT/uploads/car.pdf" target="_blank"> Car</a></p>
             <p><a href="https://drive.google.com/file/d/1xxMPkyzzkhS_Lrt772CT2A5n_xe-fvgC/view?usp=drive_link" target="_blank"> Module 1</a></p>
             <?php
             // PHP code to generate notes dynamically

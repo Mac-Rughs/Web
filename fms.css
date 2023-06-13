@@ -75,4 +75,36 @@ body {
         background-color: rgb(255, 255, 255);
         text-decoration: none;
     }
-    
+    .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.Sem {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #876c6c;
+  color: #fefafa;
+  font-size: 70%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 280px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Sem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
