@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Web Page</title>
+    <title>subject</title>
     <style>
         h1 {
             font-family: "Times New Roman", Times, serif;
@@ -39,52 +39,99 @@
     </style>
 </head>
 <body>
-    <h1>Linear Algebra and Transform
-Techniques</h1>
-    
+    <h1>$subject</h1>
+
     <div class="column">
         <h2>Notes</h2>
         <div class="scroll-box">
-            <!-- Add your notes content here -->
-            <p><a href="http://localhost:8012/PrepIT/uploads/car.pdf" target="_blank"> Car</a></p>
-            <p><a href="https://drive.google.com/file/d/1xxMPkyzzkhS_Lrt772CT2A5n_xe-fvgC/view?usp=drive_link" target="_blank"> Module 1</a></p>
             <?php
-            // PHP code to generate notes dynamically
-            for ($i = 1; $i <= 20; $i++) {
-                echo "<p>Note $i</p>";
+            // Database configuration
+            $servername = "localhost";
+            $username = "blablaadmin";
+            $password = "bla123bla456";
+            $dbname = "prepit_notes";
+
+            // Create a new connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
             }
+
+            // Function to generate dynamic content based on the subject and type
+            function generateContent($conn, $subject, $type)
+            {
+                // Prepare and execute a query to retrieve the content for the selected subject and type
+                $query = "SELECT file_name, file_path FROM notes WHERE subject = '$subject' AND type = '$type'";
+                $result = mysqli_query($conn, $query);
+
+                // Process the query result and generate the content
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $fileName = $row['file_name'];
+                        $filePath = $row['file_path'];
+                        echo "<p><a href='$filePath' target='_blank'>$fileName</a></p>";
+                    }
+                } else {
+                    echo "No $type available for this subject.";
+                }
+            }
+
+            // Retrieve the subject from the query parameter
+            $subject = $_GET['subject'];
+
+            // Call the generateContent function with the selected subject and type 'Notes'
+            generateContent($conn, $subject, 'Notes');
+
+            // Close the database connection
+            mysqli_close($conn);
             ?>
         </div>
     </div>
-    
+
     <div class="column">
         <h2>YouTube Links</h2>
         <div class="scroll-box">
-            <!-- Add your YouTube links content here -->
-            <p><a href="https://youtu.be/xxQd2W_JZFA?list=PL7lBkW4pLsIK-G03ZOcyJ34cMKc5iQ4QA" target="_blank"> Module 1</a></p>
-            <p><a href="https://youtu.be/wPurDFlD3Kk?list=PL7lBkW4pLsIK-G03ZOcyJ34cMKc5iQ4QA&t" target="_blank"> Rank Of Matrix</a></p>
             <?php
-            // PHP code to generate YouTube links dynamically
-            for ($i = 1; $i <= 10; $i++) {
-                echo "<p>YouTube Link $i</p>";
+            // Create a new connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
             }
+
+            // Call the generateContent function with the selected subject and type 'YouTube Links'
+            generateContent($conn, $subject, 'YouTube Links');
+
+            // Close the database connection
+            mysqli_close($conn);
             ?>
         </div>
     </div>
-    
+
     <div class="column">
         <h2>Question Papers</h2>
         <div class="scroll-box">
-            <!-- Add your question papers content here -->
             <?php
-            // PHP code to generate question papers dynamically
-            for ($i = 1; $i <= 5; $i++) {
-                echo "<p>Question Paper $i</p>";
+            // Create a new connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
             }
+
+            // Call the generateContent function with the selected subject and type 'Question Papers'
+            generateContent($conn, $subject, 'Question Papers');
+
+            // Close the database connection
+            mysqli_close($conn);
             ?>
         </div>
     </div>
-    
+
     <div class="clear"></div>
     <a class="back-button" href="fms.php">Back</a>
 </body>

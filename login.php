@@ -25,22 +25,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     // Query the database
-    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $sql = "SELECT * FROM users WHERE username='$username'";
     $result = mysqli_query($conn, $sql);
 
     // Check if user exists
     if (mysqli_num_rows($result) == 1) {
-        // Start a session and store user data
-        session_start();
-        $_SESSION['username'] = $username;
+        $row = mysqli_fetch_assoc($result);
+        $hashed_password = $row['password'];
 
-        // Redirect to home page
-        header("Location: index.php");
-        exit();
-    } else {
-        // User authentication failed, show error message
-        echo "Invalid username or password.";
+        // Verify the password
+        if (password_verify($password, $hashed_password)) {
+            // Start a session and store user data
+            session_start();
+            $_SESSION['username'] = $username;
+
+            // Redirect to home page
+            header("Location: index.php");
+            exit();
+        }
     }
+
+    // User authentication failed, show error message
+    echo "Invalid username or password.";
 }
 
 mysqli_close($conn);
